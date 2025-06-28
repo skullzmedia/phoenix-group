@@ -1,0 +1,237 @@
+---
+import { Image } from 'astro:assets';
+
+const quickLinks = [
+    { name: 'Home', url: '/' },
+    { name: 'About Us', url: '/about' },
+    { name: 'Entertainment', url: '#entertainment' },
+    { name: 'Gallery', url: '#gallery' },
+    { name: 'Contact Us', url: '/contact' },
+];
+---
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column logo-column">
+                <div class="footer-logo">
+                    <img src="/logo-new.png" alt="Phoenixx Casino Logo" width="180" height="60">
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    {quickLinks.map(link => (
+                        <li><a href={link.url}>{link.name}</a></li>
+                    ))}
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hilton Goa Resort, Saipem, Candolim</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:09960007937">09960007937</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <div class="copyright">
+                <p>&copy; 2025 Phoenix Group Goa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .site-footer {
+        background-color: #0a0a0a;
+        color: #e0e0e0;
+        padding: 40px 0 20px;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-columns {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .logo-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-logo img {
+        height: 150px;
+        width: auto;
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(231, 201, 128, 0.4);
+    }
+
+    .footer-heading {
+        font-family: var(--font-family-base);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #e7c980;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .footer-heading:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #b0b0b0;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #e7c980;
+    }
+
+    .contact-info {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-info li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #b0b0b0;
+    }
+
+    .contact-info li i {
+        color: #e7c980;
+        margin-right: 10px;
+        min-width: 16px;
+        margin-top: 3px;
+    }
+
+    .contact-info a {
+        color: #b0b0b0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+        color: #e7c980;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+        border-top: 1px solid rgba(231, 201, 128, 0.2);
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .copyright p {
+        color: #888;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-columns {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .logo-column {
+            align-items: center;
+        }
+
+        .footer-column {
+            text-align: center;
+        }
+
+        .footer-heading:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact-info li {
+            justify-content: center;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+    }
+</style>

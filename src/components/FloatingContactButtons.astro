@@ -1,0 +1,141 @@
+---
+// FloatingContactButtons.astro
+---
+
+<!-- Phone Button (Left Side) -->
+<div class="floating-phone">
+    <a href="tel:09960007937" class="contact-button phone-button" aria-label="Call us">
+        <i class="fas fa-phone"></i>
+        <span class="button-text">09960007937</span>
+    </a>
+</div>
+
+<!-- WhatsApp Button (Right Side) -->
+<div class="floating-whatsapp">
+    <a href="https://wa.me/919960007937" target="_blank" class="contact-button whatsapp-button" aria-label="Contact on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<style>
+    /* Common button styles */
+    .contact-button {
+        height: 60px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .contact-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-button i {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    /* Phone button (Left side) */
+    .floating-phone {
+        position: fixed;
+        bottom: 30px;
+        left: 15px;
+        z-index: 9999;
+    }
+
+    .phone-button {
+        background-color: #e7c980;
+        color: #000;
+        padding-right: 20px;
+    }
+
+    .button-text {
+        font-weight: 600;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    /* WhatsApp button (Right side) */
+    .floating-whatsapp {
+        position: fixed;
+        bottom: 30px;
+        right: 15px;
+        z-index: 9999;
+    }
+
+    .whatsapp-button {
+        background-color: #25D366;
+        color: #fff;
+        width: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        animation: pulse 2s infinite;
+    }
+
+    /* Pulse animation */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        70% {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .floating-phone,
+        .floating-whatsapp {
+            bottom: 20px;
+        }
+
+        .contact-button {
+            height: 50px;
+        }
+
+        .contact-button i {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        
+        .button-text {
+            font-size: 14px;
+        }
+        
+        .phone-button {
+            padding-right: 15px;
+        }
+    }
+    
+    /* For very small screens */
+    @media (max-width: 380px) {
+        .phone-button {
+            width: 50px;
+            padding-right: 0;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .button-text {
+            display: none;
+        }
+    }
+</style> 

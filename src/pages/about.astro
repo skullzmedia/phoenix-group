@@ -1,0 +1,328 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import aboutImage from '../assets/abtus/image.jpg';
+import AboutSectionImage from '../assets/abtus/aboutsection.jpeg';
+
+// Highlights with icons
+const highlights = [
+  {
+    icon: 'dice',
+    title: '20+ Games',
+    description: 'Enjoy a variety of card games, slot machines, and table games'
+  },
+  {
+    icon: 'smoking',
+    title: 'Hookah Lounge',
+    description: 'Relax in our premium hookah lounge with exclusive flavors'
+  },
+  {
+    icon: 'crown',
+    title: 'VIP Room',
+    description: 'Experience luxury gaming in our exclusive VIP rooms'
+  },
+  {
+    icon: 'music',
+    title: 'Live Performances',
+    description: 'Enjoy regular live entertainment and special celebrity events'
+  },
+  {
+    icon: 'utensils',
+    title: 'Restaurant',
+    description: 'Savor gourmet cuisine with our premium dining experience'
+  },
+  {
+    icon: 'glass-martini-alt',
+    title: 'Phoenixx Group Goa',
+    description: 'Luxury Playing Destination'
+  }
+];
+---
+
+<Layout title="About Us | Phoenixx Casino">
+  <section class="page-banner" style={`background-image: url(${aboutImage.src});`}>
+    <div class="container">
+      <h1 class="page-title">About Us</h1>
+      <p class="page-subtitle">Discover the luxury and excitement of Phoenixx Casino Goa</p>
+    </div>
+  </section>
+
+  <section class="about-intro">
+    <div class="container">
+      <div class="intro-content">
+        <div class="intro-text">
+          <h2 class="section-title">Phoenixx Casino - Goa's Most Luxurious Casino</h2>
+          <p class="intro-description">
+            We are proud to be one of Goa's most luxurious casinos, our tag line "Where Luxury Begins and Fortunes Rise" speaks for itself. Located in Hilton Goa Resort, Candolim, we offer unforgettable casino experience for our visitors.
+          </p>
+          <p class="intro-description">
+            From the moment you step through our doors, you'll be immersed in an atmosphere of elegance and excitement. Our casino features state-of-the-art gaming facilities, exceptional service, and an ambiance that rivals the world's premier gaming destinations.
+          </p>
+          <div class="intro-cta">
+            <a href="/packages" class="cta-button">Explore Our Packages</a>
+          </div>
+        </div>
+        <div class="intro-image">
+          <Image 
+            src={AboutSectionImage} 
+            alt="Phoenixx Casino Interior" 
+            width={800}
+            height={600}
+            quality={80}
+            class="about-img"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights-section">
+    <div class="container">
+      <h2 class="section-title">Our Highlights</h2>
+      <p class="section-subtitle">What makes Phoenixx Casino special</p>
+      <div class="highlights-grid">
+        {highlights.map((highlight) => (
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <i class={`fa-solid fa-${highlight.icon}`}></i>
+            </div>
+            <h3 class="highlight-title">{highlight.title}</h3>
+            <p class="highlight-description">{highlight.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Page Banner */
+  .page-banner {
+    padding: 3rem 0 4rem;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    margin-top: 120px; /* Account for fixed nav height */
+  }
+  .page-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  .page-banner .container {
+    position: relative;
+    z-index: 2;
+  }
+  .page-title {
+    font-size: 3rem;
+    color: #e7c980;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .page-subtitle {
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    color: #e7c980;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .cta-button {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #000;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+  .cta-button:hover {
+    background-color: #C5A028;
+    transform: translateY(-2px);
+  }
+  .about-intro {
+    padding: 5rem 0;
+    background-color: #000;
+  }
+  .intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .intro-text {
+    padding-right: 2rem;
+  }
+  .intro-description {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .intro-cta {
+    margin-top: 2rem;
+  }
+  .intro-image {
+    position: relative;
+  }
+  .about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(231, 201, 128, 0.2);
+  }
+  .intro-image::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 100px;
+    height: 100px;
+    border-top: 2px solid #e7c980;
+    border-left: 2px solid #e7c980;
+    z-index: 1;
+  }
+  .intro-image::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 2px solid #e7c980;
+    border-right: 2px solid #e7c980;
+    z-index: 1;
+  }
+  .highlights-section {
+    padding: 2rem 0;
+    background-color: #0a0a0a;
+    text-align: center;
+  }
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .highlight-card {
+    background-color: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(231, 201, 128, 0.2);
+    border-radius: 8px;
+    padding: 2.5rem 1.5rem;
+    transition: all 0.3s ease;
+  }
+  .highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(231, 201, 128, 0.4);
+  }
+  .highlight-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(231, 201, 128, 0.1) 0%, rgba(231, 201, 128, 0.05) 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    color: #e7c980;
+    font-size: 1.8rem;
+  }
+  .highlight-title {
+    font-size: 1.3rem;
+    color: #e7c980;
+    margin-bottom: 1rem;
+  }
+  .highlight-description {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  @media (max-width: 1024px) {
+    .highlights-grid {
+      gap: 1.5rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+    .page-banner {
+      margin-top: 100px;
+      padding: 6rem 0 3rem;
+    }
+    .page-title {
+      font-size: 2.5rem;
+    }
+    .section-title {
+      font-size: 2rem;
+    }
+    .intro-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .intro-text {
+      padding-right: 0;
+      order: 2;
+    }
+    .intro-image {
+      order: 1;
+    }
+    .highlights-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .about-intro, .highlights-section {
+      padding: 3rem 0;
+    }
+    .page-title {
+      font-size: 2rem;
+    }
+    .section-title {
+      font-size: 1.75rem;
+    }
+    .intro-description {
+      font-size: 1rem;
+    }
+    .highlights-grid {
+      grid-template-columns: 1fr;
+    }
+    .highlight-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style> 

@@ -1,0 +1,274 @@
+---
+import { Image } from 'astro:assets';
+import SliderImageMob from '../assets/banner/banner-mob-1.png';
+import SliderImageDesk from '../assets/banner/banner-desk-1.png';
+import SliderImage2 from '../assets/banner/banner-2.jpg';
+import SliderImage3 from '../assets/banner/banner-3.jpg';
+import SliderImage5Desk from '../assets/banner/banner-5.png';
+
+const sliderImages = [
+    {
+        image: SliderImage2,
+        alt: 'Live Shows',
+        isResponsive: false
+    },
+    {
+        image: SliderImage3,
+        alt: 'Casino Games',
+        isResponsive: false
+    },
+    {
+        image: SliderImage5Desk,
+        alt: 'Casino Experience',
+        isResponsive: false
+    }
+];
+---
+
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>#1 Luxury Playing Destination in Goa</h1>
+        <p class="hero-subtitle">Live Performances | DJs | Bands's | Unlimited Food & Drinks | Celebrity Visit's</p>
+        <a href="#contact-cta" class="cta-button">Contact us</a>
+    </div>
+    <div class="hero-slider">
+        <div class="slider-container">
+            {sliderImages.map((slide, index) => (
+                <div class="slide" data-index={index}>
+                    {slide.isResponsive ? (
+                        <>
+                            <Image 
+                                src={slide.desktop}
+                                alt={slide.alt}
+                                width={1400}
+                                height={600}
+                                quality={90}
+                                class="slider-image desktop-image"
+                            />
+                            <Image 
+                                src={slide.mobile}
+                                alt={slide.alt}
+                                width={480}
+                                height={600}
+                                quality={90}
+                                class="slider-image mobile-image"
+                            />
+                        </>
+                    ) : (
+                        <Image 
+                            src={slide.image}
+                            alt={slide.alt}
+                            width={1400}
+                            height={600}
+                            quality={90}
+                            class="slider-image"
+                        />
+                    )}
+                    <div class="gradient-overlay"></div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll<HTMLElement>('.slide');
+        let currentSlide = 0;
+        const slideCount = slides.length;
+
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+                slide.style.opacity = index === currentSlide ? '1' : '0';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slideCount;
+            updateSlider();
+        }
+
+        // Initialize slider
+        updateSlider();
+
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 3000);
+    });
+</script>
+
+<style>
+    .hero-section {
+        width: 100%;
+        padding: 0 1rem;
+        margin: 0;
+        box-sizing: border-box;
+        margin-top: 174px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 3;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        color: #e7c980;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+        color: black;
+        padding: 1rem 2.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(231, 201, 128, 0.3);
+    }
+
+    .hero-slider {
+        position: relative;
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        height: min(600px, 70vh);
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+
+    .slide[data-index="0"] {
+        opacity: 1;
+    }
+
+    .slider-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.7) 100%
+        );
+        z-index: 2;
+    }
+
+    .desktop-image {
+        display: block;
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 0 0.5rem;
+            margin-top: 144px;
+            z-index: 1;
+        }
+
+        .hero-content {
+            padding: 0 0.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+        }
+
+        .hero-slider {
+            height: min(400px, 60vh);
+            border-radius: 4px;
+        }
+
+        .desktop-image {
+            display: none;
+        }
+
+        .mobile-image {
+            display: block;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-section {
+            margin-top: 134px;
+        }
+        
+        .hero-slider {
+            height: min(500px, 50vh);
+        }
+
+        .hero-content h1 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+        }
+
+        .cta-button {
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+        }
+    }
+</style> 
