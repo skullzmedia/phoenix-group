@@ -169,6 +169,62 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"best-casino-in-panjim.md": {
+	id: "best-casino-in-panjim.md";
+  slug: "the-best-casino-in-panjim-explore-the-nightlife-and-entertainment-at-the-biggest-casino";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"best-times-to-visit-casinos.md": {
+	id: "best-times-to-visit-casinos.md";
+  slug: "the-best-times-to-visit-casinos-in-goa-for-maximum-fun";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-plan-a-perfect-casino-night-in-goa.md": {
+	id: "how-to-plan-a-perfect-casino-night-in-goa.md";
+  slug: "How-to-Plan-a-Perfect-Casino-Night-in-Goa-First-Timers-Guide-to-Phoenix-Casino-Candolim";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"role-of-casinos-in-party.md": {
+	id: "role-of-casinos-in-party.md";
+  slug: "the-role-of-casinos-in-the-party-scene";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-biggest-casino-in-goa.md": {
+	id: "the-biggest-casino-in-goa.md";
+  slug: "the-biggest-casino-in-goa-a-review-of-its-features-and-amenities";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"top-5-casino-games.md": {
+	id: "top-5-casino-games.md";
+  slug: "top-5-casino-games-to-try-at-a-casino-in-goa";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"top-attractions-at-phoenix-casino.md": {
+	id: "top-attractions-at-phoenix-casino.md";
+  slug: "top-attractions-at-the-goas-biggest-casino-phoenix-casino";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-sets-phoenix-casino-apart.md": {
+	id: "what-sets-phoenix-casino-apart.md";
+  slug: "big-casino-in-goa";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 
 	};

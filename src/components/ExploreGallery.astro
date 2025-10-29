@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import entertainment1 from "../assets/gallery/entertainment/1.jpg";
 import entertainment2 from "../assets/gallery/entertainment/2.jpg";
 import entertainment3 from "../assets/gallery/entertainment/3.jpg";
@@ -34,742 +34,981 @@ import celebrities10 from "../assets/gallery/celebrities/10.jpg";
 import celebrities11 from "../assets/gallery/celebrities/11.jpg";
 
 const categories = [
-    { id: 'all', label: 'All' },
-    { id: 'performances', label: 'Performances' },
-    { id: 'ambiance', label: 'Ambiance' },
-    { id: 'food', label: 'Food' },
-    { id: 'celebrities', label: 'Celebrities' },
+  { id: "all", label: "All" },
+  { id: "performances", label: "Performances" },
+  { id: "ambiance", label: "Ambiance" },
+  { id: "food", label: "Food" },
+  { id: "celebrities", label: "Celebrities" },
 ];
 
 const galleryItems = [
-    // Entertainment
-    { image: entertainment1, alt: "Live Band", width: 800, height: 1000, category: "performances" },
-    { image: entertainment2, alt: "DJ Performance", width: 800, height: 1000, category: "performances" },
-    { image: entertainment3, alt: "Stage Show", width: 800, height: 1000, category: "performances" },
-    { image: entertainment4, alt: "Dance Floor", width: 800, height: 1000, category: "performances" },
-    { image: entertainment5, alt: "Nightlife", width: 800, height: 1000, category: "performances" },
+  // Entertainment
+  {
+    image: entertainment1,
+    alt: "Live Band",
+    width: 800,
+    height: 1000,
+    category: "performances",
+  },
+  {
+    image: entertainment2,
+    alt: "DJ Performance",
+    width: 800,
+    height: 1000,
+    category: "performances",
+  },
+  {
+    image: entertainment3,
+    alt: "Stage Show",
+    width: 800,
+    height: 1000,
+    category: "performances",
+  },
+  {
+    image: entertainment4,
+    alt: "Dance Floor",
+    width: 800,
+    height: 1000,
+    category: "performances",
+  },
+  {
+    image: entertainment5,
+    alt: "Nightlife",
+    width: 800,
+    height: 1000,
+    category: "performances",
+  },
 
-    // Ambiance
-    { image: ambiance1, alt: "Lobby View", width: 800, height: 1000, category: "ambiance" },
-    { image: ambiance2, alt: "Chandeliers", width: 800, height: 1000, category: "ambiance" },
-    { image: ambiance3, alt: "Bar Area", width: 800, height: 1000, category: "ambiance" },
-    { image: ambiance4, alt: "Interior Design", width: 800, height: 1000, category: "ambiance" },
+  // Ambiance
+  {
+    image: ambiance1,
+    alt: "Lobby View",
+    width: 800,
+    height: 1000,
+    category: "ambiance",
+  },
+  {
+    image: ambiance2,
+    alt: "Chandeliers",
+    width: 800,
+    height: 1000,
+    category: "ambiance",
+  },
+  {
+    image: ambiance3,
+    alt: "Bar Area",
+    width: 800,
+    height: 1000,
+    category: "ambiance",
+  },
+  {
+    image: ambiance4,
+    alt: "Interior Design",
+    width: 800,
+    height: 1000,
+    category: "ambiance",
+  },
 
-    // Food & Drinks
-    { image: food1, alt: "Gourmet Dishes", width: 800, height: 1000, category: "food" },
-    { image: food2, alt: "Cocktail Bar", width: 800, height: 1000, category: "food" },
-    { image: food3, alt: "Dessert Spread", width: 800, height: 1000, category: "food" },
-    { image: food4, alt: "Wine Selection", width: 800, height: 1000, category: "food" },
-    { image: food5, alt: "Chef's Special", width: 800, height: 1000, category: "food" },
-    { image: food6, alt: "Appetizers", width: 800, height: 1000, category: "food" },
-    { image: food7, alt: "Buffet Setup", width: 800, height: 1000, category: "food" },
-    { image: food8, alt: "Cocktail Bar", width: 800, height: 1000, category: "food" },
-    { image: food9, alt: "Cocktail Bar", width: 800, height: 1000, category: "food" },
-    { image: food10, alt: "Cocktail Bar", width: 800, height: 1000, category: "food" },
-    { image: food11, alt: "Cocktail Bar", width: 800, height: 1000, category: "food" },
-    { image: food12, alt: "Cocktail Bar", width: 800, height: 1000, category: "food" },
-    { image: food13, alt: "Cocktail Bar", width: 800, height: 1000, category: "food" },
-    // Celebrities
-    { image: celebrities1, alt: "Celebrity Appearance", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities2, alt: "Star Guest", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities3, alt: "VIP Entry", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities4, alt: "Red Carpet", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities5, alt: "Celebrity Meet", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities6, alt: "Famous Performer", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities7, alt: "Star Interaction", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities8, alt: "Celebrity Host", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities10, alt: "Exclusive Event", width: 800, height: 1000, category: "celebrities" },
-    { image: celebrities11, alt: "Star Performance", width: 800, height: 1000, category: "celebrities" },
+  // Food & Drinks
+  {
+    image: food1,
+    alt: "Gourmet Dishes",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food2,
+    alt: "Cocktail Bar",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food3,
+    alt: "Dessert Spread",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food4,
+    alt: "Wine Selection",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food5,
+    alt: "Chef's Special",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food6,
+    alt: "Appetizers",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food7,
+    alt: "Buffet Setup",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food8,
+    alt: "Cocktail Bar",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food9,
+    alt: "Cocktail Bar",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food10,
+    alt: "Cocktail Bar",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food11,
+    alt: "Cocktail Bar",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food12,
+    alt: "Cocktail Bar",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  {
+    image: food13,
+    alt: "Cocktail Bar",
+    width: 800,
+    height: 1000,
+    category: "food",
+  },
+  // Celebrities
+  {
+    image: celebrities1,
+    alt: "Celebrity Appearance",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities2,
+    alt: "Star Guest",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities3,
+    alt: "VIP Entry",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities4,
+    alt: "Red Carpet",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities5,
+    alt: "Celebrity Meet",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities6,
+    alt: "Famous Performer",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities7,
+    alt: "Star Interaction",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities8,
+    alt: "Celebrity Host",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities10,
+    alt: "Exclusive Event",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
+  {
+    image: celebrities11,
+    alt: "Star Performance",
+    width: 800,
+    height: 1000,
+    category: "celebrities",
+  },
 ];
 ---
+
 <section class="gallery-section" id="gallery">
-    <div class="container">
-        <h2 class="section-title">EXPLORE OUR ENTERTAINMENT HUB</h2>
-        
-        <!-- Add mobile dropdown -->
-        <div class="category-filter-mobile">
-            <select class="category-select" aria-label="Filter gallery">
-                {categories.map(category => (
-                    <option value={category.id}>{category.label}</option>
-                ))}
-            </select>
-        </div>
+  <div class="container">
+    <h2 class="section-title">EXPLORE OUR ENTERTAINMENT HUB</h2>
 
-        <!-- Desktop filter buttons -->
-        <div class="category-filter">
-            {categories.map(category => (
-                <button 
-                    class="filter-btn" 
-                    data-category={category.id}
-                    data-active={category.id === 'all' ? 'true' : 'false'}
-                >
-                    {category.label}
-                </button>
-            ))}
-        </div>
-
-        <div class="gallery-container">
-            <button class="slider-control prev" aria-label="Previous slides">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M15 18l-6-6 6-6"/>
-                </svg>
-            </button>
-            
-            <div class="gallery-scroll">
-                {galleryItems.filter(item => item.image).map(item => (
-                    <div class="gallery-item" data-category={item.category}>
-                        <Image 
-                            src={item.image} 
-                            alt={item.alt} 
-                            width={item.width}
-                            height={item.height}
-                            quality={80}
-                            loading="lazy"
-                            class="gallery-image"
-                        />
-                    </div>
-                ))}
-            </div>
-
-            <button class="slider-control next" aria-label="Next slides">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 18l6-6-6-6"/>
-                </svg>
-            </button>
-        </div>
+    <!-- Add mobile dropdown -->
+    <div class="category-filter-mobile">
+      <select class="category-select" aria-label="Filter gallery">
+        {
+          categories.map((category) => (
+            <option value={category.id}>{category.label}</option>
+          ))
+        }
+      </select>
     </div>
+
+    <!-- Desktop filter buttons -->
+    <div class="category-filter">
+      {
+        categories.map((category) => (
+          <button
+            class="filter-btn"
+            data-category={category.id}
+            data-active={category.id === "all" ? "true" : "false"}
+          >
+            {category.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="gallery-container">
+      <button class="slider-control prev" aria-label="Previous slides">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M15 18l-6-6 6-6"></path>
+        </svg>
+      </button>
+
+      <div class="gallery-scroll">
+        {
+          galleryItems
+            .filter((item) => item.image)
+            .map((item) => (
+              <div class="gallery-item" data-category={item.category}>
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  width={item.width}
+                  height={item.height}
+                  quality={80}
+                  loading="lazy"
+                  class="gallery-image"
+                />
+              </div>
+            ))
+        }
+      </div>
+
+      <button class="slider-control next" aria-label="Next slides">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M9 18l6-6-6-6"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
 </section>
 
 <div class="cta-section">
-    <div class="container">
-        <a href="#contact-cta" class="cta-button">VISIT US NOW</a>
-    </div>
+  <div class="container">
+    <a href="#contact-cta" class="cta-button">VISIT US NOW</a>
+  </div>
 </div>
 
 <div class="image-lightbox" id="imageLightbox">
-    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-    <img src="" alt="" class="lightbox-image">
-    <p class="lightbox-caption"></p>
+  <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+  <img src="" alt="" class="lightbox-image" />
+  <p class="lightbox-caption"></p>
 </div>
 
 <style>
-    .gallery-section {
-        padding: 2rem 0;
-        background-color: var(--color-bg);
-        position: relative;
-        overflow: hidden;
-    }
+  .gallery-section {
+    padding: 2rem 0;
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+  }
 
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .filter-btn[data-active="true"] {
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .filter-btn[data-active="true"]::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+  }
+
+  .filter-btn:hover {
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gallery-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+    min-height: 400px;
+  }
+
+  .gallery-scroll {
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;
+    transition: all 0.3s ease;
+    touch-action: pan-x;
+    cursor: grab;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    min-height: 350px;
+    align-items: flex-start;
+  }
+
+  .gallery-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-item {
+    width: 280px;
+    aspect-ratio: 4/5;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0;
+  }
+
+  .gallery-item.hidden {
+    display: none;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(231, 201, 128, 0.1);
+    border: 1px solid rgba(231, 201, 128, 0.3);
+    color: #e7c980;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+  }
+
+  .slider-control:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .slider-control:not(:disabled):hover {
+    background: rgba(231, 201, 128, 0.2);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .slider-control:active:not(:disabled) {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .slider-control.prev {
+    left: 0;
+  }
+
+  .slider-control.next {
+    right: 0;
+  }
+
+  .hidden {
+    opacity: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
     .container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 2rem;
+      padding: 0 1rem;
+      width: 95%;
     }
 
     .section-title {
-        font-size: 2.5rem;
-        text-align: center;
-        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 3rem;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-
-    .category-filter {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 3rem;
-        flex-wrap: wrap;
+      font-size: 2rem;
     }
 
     .filter-btn {
-        background: transparent;
-        border: none;
-        font-size: 1.1rem;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .filter-btn[data-active="true"] {
-        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .filter-btn[data-active="true"]::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 30px;
-        height: 2px;
-        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-    }
-
-    .filter-btn:hover {
-        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .gallery-container {
-        width: 100%;
-        overflow: hidden;
-        padding: 2rem 0;
-        position: relative;
-        min-height: 400px;
-    }
-
-    .gallery-scroll {
-        display: flex;
-        gap: 2rem;
-        padding: 0 4rem;
-        transition: all 0.3s ease;
-        touch-action: pan-x;
-        cursor: grab;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        min-height: 350px;
-        align-items: flex-start;
-    }
-
-    .gallery-scroll::-webkit-scrollbar {
-        display: none;
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
     }
 
     .gallery-item {
-        width: 280px;
-        aspect-ratio: 4/5;
-        flex-shrink: 0;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        display: block;
-        margin: 0;
+      width: 250px;
     }
 
-    .gallery-item.hidden {
-        display: none;
-    }
-
-    .gallery-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .gallery-scroll {
+      gap: 1.5rem;
     }
 
     .slider-control {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(231, 201, 128, 0.1);
-        border: 1px solid rgba(231, 201, 128, 0.3);
-        color: #e7c980;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        z-index: 2;
-        backdrop-filter: blur(4px);
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      width: 98%;
+      padding: 0 0.5rem;
     }
 
-    .slider-control:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
+    .section-title {
+      font-size: 1.8rem;
     }
 
-    .slider-control:not(:disabled):hover {
-        background: rgba(231, 201, 128, 0.2);
-        transform: translateY(-50%) scale(1.1);
+    .filter-btn {
+      font-size: 0.9rem;
+      padding: 0.3rem 0.6rem;
     }
 
-    .slider-control:active:not(:disabled) {
-        transform: translateY(-50%) scale(0.95);
+    .gallery-item {
+      width: 250px;
     }
 
-    .slider-control.prev {
-        left: 0;
+    .gallery-scroll {
+      gap: 1rem;
     }
 
-    .slider-control.next {
-        right: 0;
+    .slider-control {
+      display: none;
     }
+  }
 
-    .hidden {
-        opacity: 0;
-        width: 0;
-        margin: 0;
-    }
+  .category-filter-mobile {
+    display: none;
+    margin-bottom: 2rem;
+  }
 
-    @media (max-width: 1024px) {
-        .section-title {
-            font-size: 2.5rem;
-        }
-    }
+  .category-select {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background: rgba(231, 201, 128, 0.1);
+    border: 1px solid rgba(231, 201, 128, 0.3);
+    color: #e7c980;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e7c980' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
+  }
 
-    @media (max-width: 768px) {
-        .container {
-            padding: 0 1rem;
-            width: 95%;
-        }
+  .category-select:focus {
+    outline: none;
+    border-color: #e7c980;
+  }
 
-        .section-title {
-            font-size: 2rem;
-        }
+  .category-select option {
+    background: var(--color-bg);
+    color: #e7c980;
+    padding: 0.5rem;
+  }
 
-        .filter-btn {
-            font-size: 1rem;
-            padding: 0.4rem 0.8rem;
-        }
-
-        .gallery-item {
-            width: 250px;
-        }
-        
-        .gallery-scroll {
-            gap: 1.5rem;
-        }
-
-        .slider-control {
-            display: none;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .container {
-            width: 98%;
-            padding: 0 0.5rem;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-        }
-
-        .filter-btn {
-            font-size: 0.9rem;
-            padding: 0.3rem 0.6rem;
-        }
-
-        .gallery-item {
-            width: 250px;
-        }
-        
-        .gallery-scroll {
-            gap: 1rem;
-        }
-
-        .slider-control {
-            display: none;
-        }
+  @media (max-width: 768px) {
+    .category-filter {
+      display: none; /* Hide buttons on mobile */
     }
 
     .category-filter-mobile {
-        display: none;
-        margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      padding: 0 1rem;
     }
 
-    .category-select {
-        width: 100%;
-        max-width: 300px;
-        padding: 0.8rem 1rem;
-        border-radius: 8px;
-        background: rgba(231, 201, 128, 0.1);
-        border: 1px solid rgba(231, 201, 128, 0.3);
-        color: #e7c980;
-        font-size: 1rem;
-        cursor: pointer;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e7c980' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 1rem center;
-        background-size: 1.2em;
+    .gallery-container {
+      padding: 0.5rem 0;
     }
 
-    .category-select:focus {
-        outline: none;
-        border-color: #e7c980;
+    .gallery-scroll {
+      gap: 1.5rem;
     }
+  }
 
-    .category-select option {
-        background: var(--color-bg);
-        color: #e7c980;
-        padding: 0.5rem;
-    }
+  /* Lightbox styles */
+  .image-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
 
-    @media (max-width: 768px) {
-        .category-filter {
-            display: none; /* Hide buttons on mobile */
-        }
+  .image-lightbox.active {
+    display: flex;
+  }
 
-        .category-filter-mobile {
-            display: flex;
-            justify-content: center;
-            padding: 0 1rem;
-        }
+  .lightbox-image {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 3px solid rgba(231, 201, 128, 0.3);
+    border-radius: 8px;
+  }
 
-        .gallery-container {
-            padding: 0.5rem 0;
-        }
+  .lightbox-caption {
+    color: #e7c980;
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+  }
 
-        .gallery-scroll {
-            gap: 1.5rem;
-        }
-    }
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #e7c980;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+  }
 
-    /* Lightbox styles */
-    .image-lightbox {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        z-index: 10000;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-    }
-    
-    .image-lightbox.active {
-        display: flex;
-    }
-    
-    .lightbox-image {
-        max-width: 90%;
-        max-height: 80vh;
-        object-fit: contain;
-        border: 3px solid rgba(231, 201, 128, 0.3);
-        border-radius: 8px;
-    }
-    
-    .lightbox-caption {
-        color: #e7c980;
-        margin-top: 15px;
-        font-size: 18px;
-        text-align: center;
-    }
-    
-    .lightbox-close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 40px;
-        color: #e7c980;
-        background: none;
-        border: none;
-        cursor: pointer;
-        line-height: 1;
-    }
+  /* CTA Section Styles */
+  .cta-section {
+    padding: rem 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("/casino-pattern.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 2rem 0;
+  }
 
-    /* CTA Section Styles */
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    color: black;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(231, 201, 128, 0.3);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(231, 201, 128, 0.4);
+  }
+
+  @media (max-width: 768px) {
     .cta-section {
-        padding: 3rem 0;
-        text-align: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/casino-pattern.jpg');
-        background-size: cover;
-        background-position: center;
-        margin: 2rem 0;
+      padding: 0 0;
     }
 
     .cta-button {
-        display: inline-block;
-        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-        color: black;
-        padding: 1rem 3rem;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        box-shadow: 0 4px 15px rgba(231, 201, 128, 0.3);
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
     }
-
-    .cta-button:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(231, 201, 128, 0.4);
-    }
-
-    @media (max-width: 768px) {
-        .cta-button {
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-        }
-    }
+  }
 </style>
 
 <script>
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const galleryScroll = document.querySelector('.gallery-scroll') as HTMLElement;
-    const prevButton = document.querySelector('.slider-control.prev') as HTMLButtonElement;
-    const nextButton = document.querySelector('.slider-control.next') as HTMLButtonElement;
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const galleryScroll = document.querySelector(
+    ".gallery-scroll"
+  ) as HTMLElement;
+  const prevButton = document.querySelector(
+    ".slider-control.prev"
+  ) as HTMLButtonElement;
+  const nextButton = document.querySelector(
+    ".slider-control.next"
+  ) as HTMLButtonElement;
 
-    let isDragging = false;
-    let startX: number;
-    let scrollLeft: number;
+  let isDragging = false;
+  let startX: number;
+  let scrollLeft: number;
 
-    function filterGallery(category) {
-        if (!galleryScroll) return;
+  function filterGallery(category) {
+    if (!galleryScroll) return;
 
-        let hasVisibleItems = false;
-        
-        galleryItems.forEach(item => {
-            if (category === 'all' || item.dataset.category === category) {
-                item.classList.remove('hidden');
-                hasVisibleItems = true;
-            } else {
-                item.classList.add('hidden');
-            }
-        });
+    let hasVisibleItems = false;
 
-        // Reset scroll position
-        galleryScroll.scrollLeft = 0;
-
-        // Always show navigation buttons if there are visible items
-        if (prevButton && nextButton && hasVisibleItems) {
-            prevButton.style.display = 'flex';
-            nextButton.style.display = 'flex';
-            
-            // Update initial button states
-            prevButton.style.opacity = '0.5';
-            nextButton.style.opacity = '1';
-        }
-    }
-
-    // Update filter button click handler
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.dataset.category;
-            
-            // Update active state for buttons
-            filterButtons.forEach(btn => {
-                btn.dataset.active = 'false';
-            });
-            button.dataset.active = 'true';
-            
-            // Apply filter
-            filterGallery(category);
-        });
+    galleryItems.forEach((item) => {
+      if (category === "all" || item.dataset.category === category) {
+        item.classList.remove("hidden");
+        hasVisibleItems = true;
+      } else {
+        item.classList.add("hidden");
+      }
     });
 
-    // Add mobile dropdown filter functionality
-    const categorySelect = document.querySelector('.category-select') as HTMLSelectElement;
-    if (categorySelect) {
-        categorySelect.addEventListener('change', (e) => {
-            const category = (e.target as HTMLSelectElement).value;
-            filterGallery(category);
-            
-            // Update desktop buttons active state if visible
-            filterButtons.forEach(btn => {
-                btn.dataset.active = btn.dataset.category === category ? 'true' : 'false';
-            });
-        });
+    // Reset scroll position
+    galleryScroll.scrollLeft = 0;
+
+    // Always show navigation buttons if there are visible items
+    if (prevButton && nextButton && hasVisibleItems) {
+      prevButton.style.display = "flex";
+      nextButton.style.display = "flex";
+
+      // Update initial button states
+      prevButton.style.opacity = "0.5";
+      nextButton.style.opacity = "1";
     }
+  }
 
-    // Update the slider controls
-    if (prevButton && nextButton && galleryScroll) {
-        const getVisibleItemCount = () => {
-            const galleryWidth = galleryScroll.offsetWidth;
-            const itemWidth = 280 + 32; // item width + gap
-            return Math.floor(galleryWidth / itemWidth);
-        };
+  // Update filter button click handler
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.category;
 
-        const updateButtonStates = () => {
-            const maxScroll = galleryScroll.scrollWidth - galleryScroll.offsetWidth;
-            prevButton.style.opacity = galleryScroll.scrollLeft <= 10 ? '0.5' : '1';
-            nextButton.style.opacity = galleryScroll.scrollLeft >= maxScroll - 10 ? '0.5' : '1';
-            
-            // Disable buttons when at limits
-            prevButton.disabled = galleryScroll.scrollLeft <= 10;
-            nextButton.disabled = galleryScroll.scrollLeft >= maxScroll - 10;
-        };
+      // Update active state for buttons
+      filterButtons.forEach((btn) => {
+        btn.dataset.active = "false";
+      });
+      button.dataset.active = "true";
 
-        const scroll = (direction) => {
-            const itemWidth = 280 + 32; // item width + gap
-            const visibleItems = getVisibleItemCount();
-            const scrollAmount = itemWidth * Math.max(1, Math.floor(visibleItems * 0.8));
+      // Apply filter
+      filterGallery(category);
+    });
+  });
 
-            galleryScroll.scrollBy({
-                left: direction * scrollAmount,
-                behavior: 'smooth'
-            });
+  // Add mobile dropdown filter functionality
+  const categorySelect = document.querySelector(
+    ".category-select"
+  ) as HTMLSelectElement;
+  if (categorySelect) {
+    categorySelect.addEventListener("change", (e) => {
+      const category = (e.target as HTMLSelectElement).value;
+      filterGallery(category);
 
-            // Update button states after scroll animation
-            setTimeout(updateButtonStates, 300);
-        };
+      // Update desktop buttons active state if visible
+      filterButtons.forEach((btn) => {
+        btn.dataset.active =
+          btn.dataset.category === category ? "true" : "false";
+      });
+    });
+  }
 
-        // Initial button states
+  // Update the slider controls
+  if (prevButton && nextButton && galleryScroll) {
+    const getVisibleItemCount = () => {
+      const galleryWidth = galleryScroll.offsetWidth;
+      const itemWidth = 280 + 32; // item width + gap
+      return Math.floor(galleryWidth / itemWidth);
+    };
+
+    const updateButtonStates = () => {
+      const maxScroll = galleryScroll.scrollWidth - galleryScroll.offsetWidth;
+      prevButton.style.opacity = galleryScroll.scrollLeft <= 10 ? "0.5" : "1";
+      nextButton.style.opacity =
+        galleryScroll.scrollLeft >= maxScroll - 10 ? "0.5" : "1";
+
+      // Disable buttons when at limits
+      prevButton.disabled = galleryScroll.scrollLeft <= 10;
+      nextButton.disabled = galleryScroll.scrollLeft >= maxScroll - 10;
+    };
+
+    const scroll = (direction) => {
+      const itemWidth = 280 + 32; // item width + gap
+      const visibleItems = getVisibleItemCount();
+      const scrollAmount =
+        itemWidth * Math.max(1, Math.floor(visibleItems * 0.8));
+
+      galleryScroll.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth",
+      });
+
+      // Update button states after scroll animation
+      setTimeout(updateButtonStates, 300);
+    };
+
+    // Initial button states
+    updateButtonStates();
+
+    // Event listeners for buttons
+    prevButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!prevButton.disabled) {
+        scroll(-1);
+      }
+    });
+
+    nextButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!nextButton.disabled) {
+        scroll(1);
+      }
+    });
+
+    // Update button states on scroll
+    galleryScroll.addEventListener("scroll", () => {
+      requestAnimationFrame(updateButtonStates);
+    });
+
+    // Update on window resize
+    window.addEventListener("resize", () => {
+      requestAnimationFrame(updateButtonStates);
+    });
+
+    // Update button states after filtering
+    const updateAfterFilter = () => {
+      setTimeout(() => {
         updateButtonStates();
+      }, 300);
+    };
 
-        // Event listeners for buttons
-        prevButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (!prevButton.disabled) {
-                scroll(-1);
-            }
-        });
+    // Add to filter function
+    const originalFilterGallery = filterGallery;
+    filterGallery = (category) => {
+      originalFilterGallery(category);
+      updateAfterFilter();
+    };
+  }
 
-        nextButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (!nextButton.disabled) {
-                scroll(1);
-            }
-        });
+  // Update mouse drag functionality
+  if (galleryScroll) {
+    let isMouseDown = false;
+    let startX;
+    let scrollLeft;
+    let startTime;
+    let startScrollLeft;
 
-        // Update button states on scroll
-        galleryScroll.addEventListener('scroll', () => {
-            requestAnimationFrame(updateButtonStates);
-        });
+    galleryScroll.addEventListener("mousedown", (e) => {
+      isMouseDown = true;
+      startTime = Date.now();
+      galleryScroll.style.cursor = "grabbing";
+      startX = e.pageX - galleryScroll.offsetLeft;
+      startScrollLeft = scrollLeft = galleryScroll.scrollLeft;
 
-        // Update on window resize
-        window.addEventListener('resize', () => {
-            requestAnimationFrame(updateButtonStates);
-        });
-
-        // Update button states after filtering
-        const updateAfterFilter = () => {
-            setTimeout(() => {
-                updateButtonStates();
-            }, 300);
-        };
-
-        // Add to filter function
-        const originalFilterGallery = filterGallery;
-        filterGallery = (category) => {
-            originalFilterGallery(category);
-            updateAfterFilter();
-        };
-    }
-
-    // Update mouse drag functionality
-    if (galleryScroll) {
-        let isMouseDown = false;
-        let startX;
-        let scrollLeft;
-        let startTime;
-        let startScrollLeft;
-
-        galleryScroll.addEventListener('mousedown', (e) => {
-            isMouseDown = true;
-            startTime = Date.now();
-            galleryScroll.style.cursor = 'grabbing';
-            startX = e.pageX - galleryScroll.offsetLeft;
-            startScrollLeft = scrollLeft = galleryScroll.scrollLeft;
-            
-            e.preventDefault();
-        });
-
-        const stopDragging = () => {
-            if (!isMouseDown) return;
-            
-            isMouseDown = false;
-            galleryScroll.style.cursor = 'grab';
-            
-            // Add momentum scrolling
-            const endTime = Date.now();
-            const timeElapsed = endTime - startTime;
-            const scrollDelta = galleryScroll.scrollLeft - startScrollLeft;
-            
-            if (timeElapsed < 100 && Math.abs(scrollDelta) > 50) {
-                const momentum = (scrollDelta * 2) * (100 / timeElapsed);
-                galleryScroll.scrollBy({
-                    left: momentum,
-                    behavior: 'smooth'
-                });
-            }
-        };
-
-        galleryScroll.addEventListener('mouseleave', stopDragging);
-        galleryScroll.addEventListener('mouseup', stopDragging);
-
-        galleryScroll.addEventListener('mousemove', (e) => {
-            if (!isMouseDown) return;
-            
-            e.preventDefault();
-            const x = e.pageX - galleryScroll.offsetLeft;
-            const walk = (x - startX) * 1.5;
-            galleryScroll.scrollLeft = scrollLeft - walk;
-        });
-    }
-
-    // After your existing code, add the lightbox functionality
-    const lightbox = document.getElementById('imageLightbox') as HTMLElement;
-    const lightboxImage = lightbox?.querySelector('.lightbox-image') as HTMLImageElement;
-    const lightboxCaption = lightbox?.querySelector('.lightbox-caption') as HTMLElement;
-    const lightboxClose = lightbox?.querySelector('.lightbox-close') as HTMLElement;
-    
-    // Make all gallery items clickable
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', () => {
-            const img = item.querySelector('img');
-            if (img && lightbox && lightboxImage) {
-                // Get the source image URL (using currentSrc to get the responsive version)
-                const imgSrc = img.currentSrc || img.src;
-                
-                // Get the alt text for caption
-                const imgAlt = img.alt;
-                
-                // Set the lightbox content
-                lightboxImage.src = imgSrc;
-                lightboxImage.alt = imgAlt;
-                if (lightboxCaption) {
-                    lightboxCaption.textContent = imgAlt;
-                }
-                
-                // Show the lightbox
-                lightbox.classList.add('active');
-                
-                // Prevent scrolling on the body
-                document.body.style.overflow = 'hidden';
-            }
-        });
+      e.preventDefault();
     });
-    
-    // Close lightbox when clicking the close button
-    lightboxClose?.addEventListener('click', () => {
-        lightbox?.classList.remove('active');
-        document.body.style.overflow = '';
+
+    const stopDragging = () => {
+      if (!isMouseDown) return;
+
+      isMouseDown = false;
+      galleryScroll.style.cursor = "grab";
+
+      // Add momentum scrolling
+      const endTime = Date.now();
+      const timeElapsed = endTime - startTime;
+      const scrollDelta = galleryScroll.scrollLeft - startScrollLeft;
+
+      if (timeElapsed < 100 && Math.abs(scrollDelta) > 50) {
+        const momentum = scrollDelta * 2 * (100 / timeElapsed);
+        galleryScroll.scrollBy({
+          left: momentum,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    galleryScroll.addEventListener("mouseleave", stopDragging);
+    galleryScroll.addEventListener("mouseup", stopDragging);
+
+    galleryScroll.addEventListener("mousemove", (e) => {
+      if (!isMouseDown) return;
+
+      e.preventDefault();
+      const x = e.pageX - galleryScroll.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      galleryScroll.scrollLeft = scrollLeft - walk;
     });
-    
-    // Close lightbox when clicking outside the image
-    lightbox?.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
+  }
+
+  // After your existing code, add the lightbox functionality
+  const lightbox = document.getElementById("imageLightbox") as HTMLElement;
+  const lightboxImage = lightbox?.querySelector(
+    ".lightbox-image"
+  ) as HTMLImageElement;
+  const lightboxCaption = lightbox?.querySelector(
+    ".lightbox-caption"
+  ) as HTMLElement;
+  const lightboxClose = lightbox?.querySelector(
+    ".lightbox-close"
+  ) as HTMLElement;
+
+  // Make all gallery items clickable
+  document.querySelectorAll(".gallery-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      const img = item.querySelector("img");
+      if (img && lightbox && lightboxImage) {
+        // Get the source image URL (using currentSrc to get the responsive version)
+        const imgSrc = img.currentSrc || img.src;
+
+        // Get the alt text for caption
+        const imgAlt = img.alt;
+
+        // Set the lightbox content
+        lightboxImage.src = imgSrc;
+        lightboxImage.alt = imgAlt;
+        if (lightboxCaption) {
+          lightboxCaption.textContent = imgAlt;
         }
+
+        // Show the lightbox
+        lightbox.classList.add("active");
+
+        // Prevent scrolling on the body
+        document.body.style.overflow = "hidden";
+      }
     });
-    
-    // Close lightbox with Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox?.classList.contains('active')) {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-</script> 
+  });
+
+  // Close lightbox when clicking the close button
+  lightboxClose?.addEventListener("click", () => {
+    lightbox?.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+
+  // Close lightbox when clicking outside the image
+  lightbox?.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Close lightbox with Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox?.classList.contains("active")) {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+</script>

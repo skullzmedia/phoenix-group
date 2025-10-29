@@ -4,521 +4,537 @@
 
 <!-- Add the offer banner -->
 <div class="offer-banner">
-    <span>🎉 OFFER IN PREHEADER - GET 20% OFF + FREE 500 OTPC - LIMITED PERIOD 🎉</span>
+  <span
+    >🎉 OFFER IN PREHEADER - GET 20% OFF + FREE 500 OTPC - LIMITED PERIOD 🎉</span
+  >
 </div>
 
 <nav class="navigation">
-    <div class="nav-container">
-        <div class="logo">
-            <a href="/">
-                <img src="/logo-new.png" alt="Phoenix Casino Goa" />
-            </a>
-        </div>
-        
-        <div class="nav-links desktop-nav">
-            <a href="/" class="nav-link">HOME</a>
-            <a href="#about-us" class="nav-link">ABOUT US</a>
-            <a href="#entertainment" class="nav-link">ENTERTAINMENT</a>
-            <a href="#gallery" class="nav-link">GALLERY</a>
-            <a href="tel:09960007937" class="phone-link">09960007937</a>
-        </div>
+  <div class="nav-container">
+    <div class="logo">
+      <a href="/">
+        <img src="/logo-new.png" alt="Phoenix Casino Goa" />
+      </a>
+    </div>
 
-        <div class="book-now desktop-nav">
-            <a href="#contact-cta" class="cta-button">BOOK NOW</a>
-        </div>
-        
-        <!-- Mobile menu button -->
-        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+    <div class="nav-links desktop-nav">
+      <a href="/" class="nav-link">HOME</a>
+      <a href="#about-us" class="nav-link">ABOUT US</a>
+      <a href="#entertainment" class="nav-link">ENTERTAINMENT</a>
+      <a href="#gallery" class="nav-link">GALLERY</a>
+      <a href="tel:09960007937" class="phone-link">Call Now</a>
     </div>
-    
-    <!-- Mobile menu overlay -->
-    <div class="mobile-menu">
-        <div class="mobile-menu-container">
-            <div class="mobile-nav-links">
-                <a href="/" class="mobile-nav-link">HOME</a>
-                <a href="/casino" class="mobile-nav-link">ABOUT US</a>
-                <a href="/entertainment" class="mobile-nav-link">ENTERTAINMENT</a>
-                <a href="/gallery" class="mobile-nav-link">GALLERY</a>
-                <a href="tel:09960007937" class="mobile-nav-link phone-link">09960007937</a>
-            </div>
-            
-            <div class="mobile-book-now">
-                <a href="#contact-cta" class="mobile-cta-button">BOOK NOW</a>
-            </div>
-        </div>
+
+    <div class="book-now desktop-nav">
+      <a href="#contact-cta" class="cta-button">BOOK NOW</a>
     </div>
+
+    <!-- Mobile menu button -->
+    <button
+      class="mobile-menu-toggle"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-container">
+      <div class="mobile-nav-links">
+        <a href="/" class="mobile-nav-link">HOME</a>
+        <a href="/casino" class="mobile-nav-link">ABOUT US</a>
+        <a href="/entertainment" class="mobile-nav-link">ENTERTAINMENT</a>
+        <a href="/gallery" class="mobile-nav-link">GALLERY</a>
+        <a href="tel:09960007937" class="mobile-nav-link phone-link">Call Now</a
+        >
+      </div>
+
+      <div class="mobile-book-now">
+        <a href="#contact-cta" class="mobile-cta-button">BOOK NOW</a>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <style>
-    /* Update offer banner styles */
+  /* Update offer banner styles */
+  .offer-banner {
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    height: 44px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Update navigation positioning */
+  .navigation {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 44px; /* Height of offer banner */
+    left: 0;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+  }
+
+  .nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  .logo img {
+    height: 120px;
+    width: auto;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .nav-link,
+  .phone-link {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.3rem 0;
+    text-transform: uppercase;
+  }
+
+  .phone-link {
+    color: #e7c980;
+    margin-left: 2rem;
+    font-size: 18px;
+    border-left: 1px solid rgba(231, 201, 128, 0.3);
+    padding-left: 2rem;
+  }
+
+  .book-now {
+    margin-left: 1rem;
+  }
+
+  .cta-button {
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    color: black;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #e7c980;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(231, 201, 128, 0.3);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 201, 128, 0.3);
+  }
+
+  /* Add these base styles before the media queries */
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none; /* Hide by default on all screen sizes */
+  }
+
+  .mobile-menu-container {
+    display: none; /* Hide by default on all screen sizes */
+  }
+
+  .mobile-nav-links {
+    display: none; /* Hide by default on all screen sizes */
+  }
+
+  /* Then in your media query, override these for mobile */
+  @media (max-width: 768px) {
     .offer-banner {
-        background-color: #ff0000;
-        color: white;
-        text-align: center;
-        padding: 8px;
-        font-weight: 600;
-        font-size: 14px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1001;
-        height: 44px; /* Fixed height */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      font-size: 12px;
+      padding: 6px;
     }
 
-    /* Update navigation positioning */
-    .navigation {
-        background-color: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        width: 100%;
-        top: 44px; /* Height of offer banner */
-        left: 0;
-        z-index: 1000;
-        padding: 0.5rem 0;
-        transition: all 0.3s ease;
+    .desktop-nav {
+      display: none;
     }
 
-    .nav-container {
-        max-width: 1300px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 2rem;
-        gap: 2rem;
+    .mobile-menu-toggle {
+      display: block;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1002;
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 2px;
+      margin: 6px auto;
+      background-color: #e7c980;
+      transition: all 0.3s ease;
     }
 
     .logo img {
-        height: 120px;
-        width: auto;
-        position: relative;
-        z-index: 1001;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 2.5rem;
-        align-items: center;
-        margin-left: auto;
-    }
-
-    .nav-link, .phone-link {
-        color: white;
-        text-decoration: none;
-        letter-spacing: 1px;
-        font-size: 16px;
-        font-weight: 600;
-        transition: color 0.3s ease;
-        position: relative;
-        padding: 0.3rem 0;
-        text-transform: uppercase;
-    }
-
-    .phone-link {
-        color: #e7c980;
-        margin-left: 2rem;
-        font-size: 18px;
-        border-left: 1px solid rgba(231, 201, 128, 0.3);
-        padding-left: 2rem;
-    }
-
-    .book-now {
-        margin-left: 1rem;
-    }
-
-    .cta-button {
-        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-        color: black;
-        padding: 0.75rem 2rem;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-        display: inline-block;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-        transition: width 0.3s ease;
-    }
-
-    .nav-link:hover {
-        color: #e7c980;
-    }
-
-    .nav-link:hover::after {
-        width: 100%;
-        box-shadow: 0 0 10px rgba(231, 201, 128, 0.3);
-    }
-
-    .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(231, 201, 128, 0.3);
-    }
-
-    /* Add these base styles before the media queries */
-    .mobile-menu-toggle {
-        display: none;
+      height: 60px;
     }
 
     .mobile-menu {
-        display: none; /* Hide by default on all screen sizes */
+      position: fixed;
+      top: 44px; /* Height of offer banner */
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 44px);
+      background: rgba(0, 0, 0, 0.98);
+      display: none; /* Still hidden by default */
+      padding-top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .mobile-menu.active {
+      display: block; /* Only show when active */
     }
 
     .mobile-menu-container {
-        display: none; /* Hide by default on all screen sizes */
+      display: block;
     }
 
     .mobile-nav-links {
-        display: none; /* Hide by default on all screen sizes */
+      display: flex;
     }
 
-    /* Then in your media query, override these for mobile */
-    @media (max-width: 768px) {
-        .offer-banner {
-            font-size: 12px;
-            padding: 6px;
-        }
-
-        .desktop-nav {
-            display: none;
-        }
-        
-        .mobile-menu-toggle {
-            display: block;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1002;
-        }
-        
-        .bar {
-            display: block;
-            width: 25px;
-            height: 2px;
-            margin: 6px auto;
-            background-color: #e7c980;
-            transition: all 0.3s ease;
-        }
-
-        .logo img {
-            height: 60px;
-        }
-        
-        .mobile-menu {
-            position: fixed;
-            top: 44px; /* Height of offer banner */
-            left: 0;
-            width: 100%;
-            height: calc(100vh - 44px);
-            background: rgba(0, 0, 0, 0.98);
-            display: none; /* Still hidden by default */
-            padding-top: 0;
-            backdrop-filter: blur(10px);
-        }
-        
-        .mobile-menu.active {
-            display: block; /* Only show when active */
-        }
-        
-        .mobile-menu-container {
-            display: block;
-        }
-        
-        .mobile-nav-links {
-            display: flex;
-        }
-        
-        .mobile-nav-link {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .mobile-nav-link.phone-link {
-            color: #e7c980;
-            font-size: 20px;
-            margin: 1rem auto;
-            border: 1px solid rgba(231, 201, 128, 0.3);
-            border-radius: 4px;
-            padding: 1rem;
-            width: 80%; /* Control the width */
-            max-width: 300px; /* Maximum width */
-            text-align: center;
-            display: block; /* Ensures proper block layout */
-        }
-        
-        .mobile-nav-link:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            bottom: -1rem;
-            left: 25%;
-            width: 50%;
-            height: 1px;
-            background: rgba(231, 201, 128, 0.2);
-        }
-        
-        .mobile-nav-link:nth-last-child(2)::after {
-            display: none;
-        }
-        
-        .mobile-book-now {
-            text-align: center;
-            margin-top: 3rem;
-        }
-        
-        .mobile-cta-button {
-            background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-            color: black;
-            padding: 1rem 3rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Hamburger menu animation */
-        .mobile-menu-toggle.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-
-        .mobile-menu-toggle.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        .mobile-menu-toggle.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
+    .mobile-nav-link {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    /* Update scrolled state styles */
+    .mobile-nav-link.phone-link {
+      color: #e7c980;
+      font-size: 20px;
+      margin: 1rem auto;
+      border: 1px solid rgba(231, 201, 128, 0.3);
+      border-radius: 4px;
+      padding: 1rem;
+      width: 80%; /* Control the width */
+      max-width: 300px; /* Maximum width */
+      text-align: center;
+      display: block; /* Ensures proper block layout */
+    }
+
+    .mobile-nav-link:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 25%;
+      width: 50%;
+      height: 1px;
+      background: rgba(231, 201, 128, 0.2);
+    }
+
+    .mobile-nav-link:nth-last-child(2)::after {
+      display: none;
+    }
+
+    .mobile-book-now {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .mobile-cta-button {
+      background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+      color: black;
+      padding: 1rem 3rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Hamburger menu animation */
+    .mobile-menu-toggle.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  /* Update scrolled state styles */
+  .navigation.scrolled {
+    background-color: rgba(0, 0, 0, 0.7); /* More translucent */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Optional: Make the logo slightly smaller when scrolled */
+  .navigation.scrolled .logo img {
+    height: 100px;
+    transition: height 0.3s ease;
+  }
+
+  /* Optional: Adjust the mobile version */
+  @media (max-width: 768px) {
     .navigation.scrolled {
-        background-color: rgba(0, 0, 0, 0.7); /* More translucent */
-        backdrop-filter: blur(8px);
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.8
+      ); /* Slightly less translucent on mobile */
     }
 
-    /* Optional: Make the logo slightly smaller when scrolled */
     .navigation.scrolled .logo img {
-        height: 100px;
-        transition: height 0.3s ease;
+      height: 50px;
+    }
+  }
+
+  /* Fixed Mobile Menu Styles */
+  @media (max-width: 768px) {
+    .nav-container {
+      padding: 0 1rem;
     }
 
-    /* Optional: Adjust the mobile version */
-    @media (max-width: 768px) {
-        .navigation.scrolled {
-            background-color: rgba(0, 0, 0, 0.8); /* Slightly less translucent on mobile */
-        }
-        
-        .navigation.scrolled .logo img {
-            height: 50px;
-        }
+    .mobile-menu {
+      position: fixed;
+      top: 44px; /* Height of offer banner */
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 44px);
+      background: rgba(0, 0, 0, 0.98);
+      display: none;
+      z-index: 1000;
+      overflow-y: auto;
     }
 
-    /* Fixed Mobile Menu Styles */
-    @media (max-width: 768px) {
-        .nav-container {
-            padding: 0 1rem;
-        }
-
-        .mobile-menu {
-            position: fixed;
-            top: 44px; /* Height of offer banner */
-            left: 0;
-            width: 100%;
-            height: calc(100vh - 44px);
-            background: rgba(0, 0, 0, 0.98);
-            display: none;
-            z-index: 1000;
-            overflow-y: auto;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-menu-container {
-            display: flex;
-            flex-direction: column;
-            padding: 2rem 1.5rem;
-            height: 100%;
-        }
-
-        .mobile-nav-links {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            align-items: center;
-            margin-top: 2rem;
-        }
-
-        .mobile-nav-link {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            width: 100%;
-            text-align: center;
-            padding: 0.5rem 0;
-        }
-
-        .mobile-nav-link:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            bottom: -1rem;
-            left: 25%;
-            width: 50%;
-            height: 1px;
-            background: rgba(231, 201, 128, 0.2);
-        }
-
-        .mobile-nav-link.phone-link {
-            color: #e7c980;
-            font-size: 20px;
-            margin: 1rem auto;
-            border: 1px solid rgba(231, 201, 128, 0.3);
-            border-radius: 4px;
-            padding: 1rem;
-            width: 80%; /* Control the width */
-            max-width: 300px; /* Maximum width */
-            text-align: center;
-            display: block; /* Ensures proper block layout */
-        }
-
-        .mobile-nav-link:nth-last-child(2)::after {
-            display: none;
-        }
-
-        .mobile-book-now {
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        .mobile-cta-button {
-            display: inline-block;
-            background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
-            color: black;
-            padding: 1rem 3rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(231, 201, 128, 0.1);
-        }
-
-        /* Improved hamburger menu */
-        .mobile-menu-toggle {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            margin-left: auto;
-        }
-
-        .bar {
-            display: block;
-            width: 25px;
-            height: 2px;
-            margin: 3px 0;
-            background-color: #e7c980;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu-toggle.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-
-        .mobile-menu-toggle.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        .mobile-menu-toggle.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
+    .mobile-menu.active {
+      display: block;
     }
+
+    .mobile-menu-container {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+      height: 100%;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .mobile-nav-link {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav-link:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 25%;
+      width: 50%;
+      height: 1px;
+      background: rgba(231, 201, 128, 0.2);
+    }
+
+    .mobile-nav-link.phone-link {
+      color: #e7c980;
+      font-size: 20px;
+      margin: 1rem auto;
+      border: 1px solid rgba(231, 201, 128, 0.3);
+      border-radius: 4px;
+      padding: 1rem;
+      width: 80%; /* Control the width */
+      max-width: 300px; /* Maximum width */
+      text-align: center;
+      display: block; /* Ensures proper block layout */
+    }
+
+    .mobile-nav-link:nth-last-child(2)::after {
+      display: none;
+    }
+
+    .mobile-book-now {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #e7c980 0%, #9e8253 100%);
+      color: black;
+      padding: 1rem 3rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(231, 201, 128, 0.1);
+    }
+
+    /* Improved hamburger menu */
+    .mobile-menu-toggle {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: auto;
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 2px;
+      margin: 3px 0;
+      background-color: #e7c980;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const nav = document.querySelector('.navigation');
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const nav = document.querySelector(".navigation");
 
-        // Toggle mobile menu
-        mobileMenuToggle?.addEventListener('click', () => {
-            mobileMenuToggle.classList.toggle('active');
-            mobileMenu?.classList.toggle('active');
-            document.body.style.overflow = mobileMenu?.classList.contains('active') ? 'hidden' : '';
-        });
-
-        // Handle scroll effects
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav?.classList.add('scrolled');
-            } else {
-                nav?.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                if (!href) return;
-
-                const targetElement = document.querySelector(href);
-                if (!targetElement) return;
-
-                // Close mobile menu if open
-                mobileMenu?.classList.remove('active');
-                mobileMenuToggle?.classList.remove('active');
-                document.body.style.overflow = '';
-
-                const headerOffset = 100;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            });
-        });
+    // Toggle mobile menu
+    mobileMenuToggle?.addEventListener("click", () => {
+      mobileMenuToggle.classList.toggle("active");
+      mobileMenu?.classList.toggle("active");
+      document.body.style.overflow = mobileMenu?.classList.contains("active")
+        ? "hidden"
+        : "";
     });
-</script> 
+
+    // Handle scroll effects
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        nav?.classList.add("scrolled");
+      } else {
+        nav?.classList.remove("scrolled");
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        if (!href) return;
+
+        const targetElement = document.querySelector(href);
+        if (!targetElement) return;
+
+        // Close mobile menu if open
+        mobileMenu?.classList.remove("active");
+        mobileMenuToggle?.classList.remove("active");
+        document.body.style.overflow = "";
+
+        const headerOffset = 100;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      });
+    });
+  });
+</script>
