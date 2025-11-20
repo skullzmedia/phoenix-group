@@ -1,40 +1,34 @@
 ---
 import { Image } from "astro:assets";
 import entertainment1 from "../assets/gallery/entertainment/entertainment1.jpg";
-import entertainment2 from "../assets/gallery/entertainment/entertainment2.jpg";
+import entertainment2 from "../assets/gallery/entertainment/entertainment2.webp";
 import entertainment3 from "../assets/gallery/entertainment/entertainment3.jpg";
-import entertainment4 from "../assets/gallery/entertainment/entertainment4.jpg";
+import entertainment4 from "../assets/gallery/entertainment/entertainment4.webp";
 import entertainment5 from "../assets/gallery/entertainment/entertainment5.jpg";
-import entertainment6 from "../assets/gallery/entertainment/entertainment6.jpg";
+import entertainment6 from "../assets/gallery/entertainment/entertainment6.webp";
 import entertainment7 from "../assets/gallery/entertainment/entertainment7.jpg";
-import entertainment8 from "../assets/gallery/entertainment/entertainment8.jpg";
-import ambiance1 from "../assets/gallery/ambiance/1.jpg";
-import ambiance2 from "../assets/gallery/ambiance/2.jpg";
-import ambiance3 from "../assets/gallery/ambiance/3.jpg";
-import ambiance4 from "../assets/gallery/ambiance/4.jpg";
-import food1 from "../assets/gallery/food-and-drinks/1.png";
-import food2 from "../assets/gallery/food-and-drinks/2.png";
-import food3 from "../assets/gallery/food-and-drinks/3.png";
-import food4 from "../assets/gallery/food-and-drinks/4.png";
-import food5 from "../assets/gallery/food-and-drinks/5.png";
-import food6 from "../assets/gallery/food-and-drinks/6.png";
-import food7 from "../assets/gallery/food-and-drinks/7.png";
-import food8 from "../assets/gallery/food-and-drinks/8.png";
-import food9 from "../assets/gallery/food-and-drinks/9.jpg";
-import food10 from "../assets/gallery/food-and-drinks/10.png";
-import food11 from "../assets/gallery/food-and-drinks/11.png";
-import food12 from "../assets/gallery/food-and-drinks/12.png";
-import food13 from "../assets/gallery/food-and-drinks/13.png";
-import celebrities1 from "../assets/gallery/celebrities/1.jpg";
-import celebrities2 from "../assets/gallery/celebrities/2.jpg";
-import celebrities3 from "../assets/gallery/celebrities/3.jpg";
-import celebrities4 from "../assets/gallery/celebrities/4.jpg";
-import celebrities5 from "../assets/gallery/celebrities/5.jpg";
-import celebrities6 from "../assets/gallery/celebrities/6.jpg";
-import celebrities7 from "../assets/gallery/celebrities/7.jpg";
-import celebrities8 from "../assets/gallery/celebrities/8.jpg";
-import celebrities10 from "../assets/gallery/celebrities/10.jpg";
-import celebrities11 from "../assets/gallery/celebrities/11.jpg";
+
+import ambiance1 from "../assets/gallery/ambiance/ambiance1.jpg";
+import ambiance2 from "../assets/gallery/ambiance/ambiance2.png";
+import ambiance3 from "../assets/gallery/ambiance/ambiance3.jpg";
+import ambiance4 from "../assets/gallery/ambiance/ambiance4.png";
+import ambiance5 from "../assets/gallery/ambiance/ambiance5.jpg";
+import ambiance6 from "../assets/gallery/ambiance/ambiance6.png";
+import ambiance7 from "../assets/gallery/ambiance/ambiance7.jpg";
+import food1 from "../assets/gallery/food-and-drinks/food-and-drinks1.jpg";
+import food2 from "../assets/gallery/food-and-drinks/food-and-drinks2.webp";
+import food3 from "../assets/gallery/food-and-drinks/food-and-drinks3.jpg";
+import food4 from "../assets/gallery/food-and-drinks/food-and-drinks4.jpg";
+import food5 from "../assets/gallery/food-and-drinks/food-and-drinks5.jpg";
+import food6 from "../assets/gallery/food-and-drinks/food-and-drinks6.jpg";
+import food7 from "../assets/gallery/food-and-drinks/food-and-drinks7.jpg";
+import celebrities1 from "../assets/gallery/celebrities/celebrities1.jpg";
+import celebrities2 from "../assets/gallery/celebrities/celebrities2.webp";
+import celebrities3 from "../assets/gallery/celebrities/celebrities3.jpg";
+import celebrities4 from "../assets/gallery/celebrities/celebrities4.webp";
+import celebrities5 from "../assets/gallery/celebrities/celebrities5.jpg";
+import celebrities6 from "../assets/gallery/celebrities/celebrities6.webp";
+import celebrities7 from "../assets/gallery/celebrities/celebrities7.jpg";
 
 const categories = [
   { id: "all", label: "All" },
@@ -95,13 +89,6 @@ const galleryItems = [
     height: 1000,
     category: "performances",
   },
-  {
-    image: entertainment8,
-    alt: "Nightlife",
-    width: 800,
-    height: 1000,
-    category: "performances",
-  },
 
   // Ambiance
   {
@@ -127,6 +114,27 @@ const galleryItems = [
   },
   {
     image: ambiance4,
+    alt: "Interior Design",
+    width: 800,
+    height: 1000,
+    category: "ambiance",
+  },
+  {
+    image: ambiance5,
+    alt: "Interior Design",
+    width: 800,
+    height: 1000,
+    category: "ambiance",
+  },
+  {
+    image: ambiance6,
+    alt: "Interior Design",
+    width: 800,
+    height: 1000,
+    category: "ambiance",
+  },
+  {
+    image: ambiance7,
     alt: "Interior Design",
     width: 800,
     height: 1000,
@@ -183,48 +191,6 @@ const galleryItems = [
     height: 1000,
     category: "food",
   },
-  {
-    image: food8,
-    alt: "Cocktail Bar",
-    width: 800,
-    height: 1000,
-    category: "food",
-  },
-  {
-    image: food9,
-    alt: "Cocktail Bar",
-    width: 800,
-    height: 1000,
-    category: "food",
-  },
-  {
-    image: food10,
-    alt: "Cocktail Bar",
-    width: 800,
-    height: 1000,
-    category: "food",
-  },
-  {
-    image: food11,
-    alt: "Cocktail Bar",
-    width: 800,
-    height: 1000,
-    category: "food",
-  },
-  {
-    image: food12,
-    alt: "Cocktail Bar",
-    width: 800,
-    height: 1000,
-    category: "food",
-  },
-  {
-    image: food13,
-    alt: "Cocktail Bar",
-    width: 800,
-    height: 1000,
-    category: "food",
-  },
   // Celebrities
   {
     image: celebrities1,
@@ -271,27 +237,6 @@ const galleryItems = [
   {
     image: celebrities7,
     alt: "Star Interaction",
-    width: 800,
-    height: 1000,
-    category: "celebrities",
-  },
-  {
-    image: celebrities8,
-    alt: "Celebrity Host",
-    width: 800,
-    height: 1000,
-    category: "celebrities",
-  },
-  {
-    image: celebrities10,
-    alt: "Exclusive Event",
-    width: 800,
-    height: 1000,
-    category: "celebrities",
-  },
-  {
-    image: celebrities11,
-    alt: "Star Performance",
     width: 800,
     height: 1000,
     category: "celebrities",
@@ -774,13 +719,13 @@ const galleryItems = [
   const filterButtons = document.querySelectorAll(".filter-btn");
   const galleryItems = document.querySelectorAll(".gallery-item");
   const galleryScroll = document.querySelector(
-    ".gallery-scroll"
+    ".gallery-scroll",
   ) as HTMLElement;
   const prevButton = document.querySelector(
-    ".slider-control.prev"
+    ".slider-control.prev",
   ) as HTMLButtonElement;
   const nextButton = document.querySelector(
-    ".slider-control.next"
+    ".slider-control.next",
   ) as HTMLButtonElement;
 
   let isDragging = false;
@@ -833,7 +778,7 @@ const galleryItems = [
 
   // Add mobile dropdown filter functionality
   const categorySelect = document.querySelector(
-    ".category-select"
+    ".category-select",
   ) as HTMLSelectElement;
   if (categorySelect) {
     categorySelect.addEventListener("change", (e) => {
@@ -979,13 +924,13 @@ const galleryItems = [
   // After your existing code, add the lightbox functionality
   const lightbox = document.getElementById("imageLightbox") as HTMLElement;
   const lightboxImage = lightbox?.querySelector(
-    ".lightbox-image"
+    ".lightbox-image",
   ) as HTMLImageElement;
   const lightboxCaption = lightbox?.querySelector(
-    ".lightbox-caption"
+    ".lightbox-caption",
   ) as HTMLElement;
   const lightboxClose = lightbox?.querySelector(
-    ".lightbox-close"
+    ".lightbox-close",
   ) as HTMLElement;
 
   // Make all gallery items clickable

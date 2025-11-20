@@ -1,35 +1,61 @@
 ---
-import { Image } from 'astro:assets';
-import CtaBackground from '../assets/gallery/entertainment/5.jpg';
+import { Image } from "astro:assets";
+import CtaBackground from "../assets/gallery/entertainment/entertainment5.jpg";
 ---
 
 <section class="hero-cta">
     <div class="background">
         <div class="overlay"></div>
-        <Image 
-            src={CtaBackground} 
-            alt="Background" 
-            width={1200} 
-            height={400} 
+        <Image
+            src={CtaBackground}
+            alt="Background"
+            width={1200}
+            height={400}
             class="bg-image"
         />
     </div>
-    
+
     <div class="content" id="contact-cta">
         <h1 class="title">Get in Touch With Us</h1>
-        
+
         <form class="contact-form" id="whatsappForm">
             <div class="form-row">
-                <input type="text" name="name" id="name" placeholder="Your Name" required class="form-input">
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                    class="form-input"
+                />
             </div>
             <div class="form-row">
-                <input type="tel" name="phone" id="phone" placeholder="Phone Number" required class="form-input">
+                <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                    class="form-input"
+                />
             </div>
             <div class="form-row">
-                <input type="email" name="email" id="email" placeholder="Email Address" required class="form-input">
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                    class="form-input"
+                />
             </div>
             <div class="form-row">
-                <textarea name="message" id="message" placeholder="Your Message" rows="4" class="form-input"></textarea>
+                <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Your Message"
+                    rows="4"
+                    class="form-input"></textarea>
             </div>
             <button type="submit" class="submit-btn">Submit</button>
         </form>
@@ -152,24 +178,32 @@ import CtaBackground from '../assets/gallery/entertainment/5.jpg';
 </style>
 
 <script>
-    const form = document.getElementById('whatsappForm');
+    const form = document.getElementById("whatsappForm");
     const whatsappNumber = "+919960007937";
 
-    form?.addEventListener('submit', (e) => {
+    form?.addEventListener("submit", (e) => {
         e.preventDefault();
-        
-        const name = (document.getElementById('name') as HTMLInputElement).value;
-        const phone = (document.getElementById('phone') as HTMLInputElement).value;
-        const email = (document.getElementById('email') as HTMLInputElement).value;
-        const message = (document.getElementById('message') as HTMLTextAreaElement).value;
+
+        const name = (document.getElementById("name") as HTMLInputElement)
+            .value;
+        const phone = (document.getElementById("phone") as HTMLInputElement)
+            .value;
+        const email = (document.getElementById("email") as HTMLInputElement)
+            .value;
+        const message = (
+            document.getElementById("message") as HTMLTextAreaElement
+        ).value;
 
         // Create WhatsApp message
         const whatsappMessage = `Hello! I would like to get in touch.\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
-        
+
         // Encode the message for URL
         const encodedMessage = encodeURIComponent(whatsappMessage);
-        
+
         // Redirect to WhatsApp
-        window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+        window.open(
+            `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+            "_blank",
+        );
     });
 </script>
