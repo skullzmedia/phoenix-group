@@ -1,10 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import entertainment1 from "../assets/gallery/entertainment/1.jpg";
-import entertainment2 from "../assets/gallery/entertainment/2.jpg";
-import entertainment3 from "../assets/gallery/entertainment/3.jpg";
-import entertainment4 from "../assets/gallery/entertainment/4.jpg";
-import entertainment5 from "../assets/gallery/entertainment/5.jpg";
+import entertainment1 from "../assets/gallery/entertainment/entertainment1.jpg";
+import entertainment2 from "../assets/gallery/entertainment/entertainment2.jpg";
+import entertainment3 from "../assets/gallery/entertainment/entertainment3.jpg";
+import entertainment4 from "../assets/gallery/entertainment/entertainment4.jpg";
+import entertainment5 from "../assets/gallery/entertainment/entertainment5.jpg";
+import entertainment6 from "../assets/gallery/entertainment/entertainment6.jpg";
+import entertainment7 from "../assets/gallery/entertainment/entertainment7.jpg";
+import entertainment8 from "../assets/gallery/entertainment/entertainment8.jpg";
 import ambiance1 from "../assets/gallery/ambiance/1.jpg";
 import ambiance2 from "../assets/gallery/ambiance/2.jpg";
 import ambiance3 from "../assets/gallery/ambiance/3.jpg";
@@ -73,6 +76,27 @@ const galleryItems = [
   },
   {
     image: entertainment5,
+    alt: "Nightlife",
+    width: 800,
+    height: 1000,
+    category: "performances",
+  },
+  {
+    image: entertainment6,
+    alt: "Nightlife",
+    width: 800,
+    height: 1000,
+    category: "performances",
+  },
+  {
+    image: entertainment7,
+    alt: "Nightlife",
+    width: 800,
+    height: 1000,
+    category: "performances",
+  },
+  {
+    image: entertainment8,
     alt: "Nightlife",
     width: 800,
     height: 1000,
@@ -277,7 +301,7 @@ const galleryItems = [
 
 <section class="gallery-section" id="gallery">
   <div class="container">
-    <h2 class="section-title">EXPLORE OUR ENTERTAINMENT HUB</h2>
+    <h2 class="section-title">EXPLORE PHOENIXX GOA</h2>
 
     <!-- Add mobile dropdown -->
     <div class="category-filter-mobile">
@@ -704,7 +728,7 @@ const galleryItems = [
 
   /* CTA Section Styles */
   .cta-section {
-    padding: rem 0;
+    padding: 0rem 0;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url("/casino-pattern.jpg");
@@ -736,6 +760,7 @@ const galleryItems = [
   @media (max-width: 768px) {
     .cta-section {
       padding: 0 0;
+      margin: -4rem 0 2rem;
     }
 
     .cta-button {

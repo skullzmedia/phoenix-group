@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "astro": "3.0.0"
+  },
+  "dependencies": {
+    "lucide-astro": "^0.548.0"
   }
 }
