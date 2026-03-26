@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { ChevronLeft, ChevronRight } from "lucide-astro";
 import LiveEntertainment from "../assets/the-exp/live-entertainment.jpg";
 import CelebrityVisits from "../assets/the-exp/celebrity-visits.jpg";
 import Cocktails from "../assets/the-exp/cocktails.jpg";
@@ -7,17 +8,11 @@ import LuxuryCuisine from "../assets/the-exp/cuisine.jpg";
 import RussianDance from "../assets/the-exp/russian-dance.jpg";
 import ExcitedEvents from "../assets/the-exp/events.jpg";
 import LuxuryGaming from "../assets/the-exp/luxury-gaming.jpg";
-import SliderImage5Desk from "../assets/banner/banner-5.png";
 
 const cards = [
   {
     image: RussianDance,
     title: "Russian Dance",
-    initialClass: "",
-  },
-  {
-    image: SliderImage5Desk,
-    title: "Luxury Ambiance",
     initialClass: "",
   },
   {
@@ -84,22 +79,32 @@ const activeIndex = cards.findIndex((card) => card.initialClass === "active");
       </div>
 
       <button class="slider-arrow prev-arrow" aria-label="Previous slide">
-        <i class="fa-solid fa-angle-left"></i>
+        <ChevronLeft class="icon" />
       </button>
       <button class="slider-arrow next-arrow" aria-label="Next slide">
-        <i class="fa-solid fa-angle-right"></i>
+        <ChevronRight class="icon" />
       </button>
     </div>
   </div>
 </section>
 
 <script>
-  // Wait for DOM to be fully loaded
-  document.addEventListener("DOMContentLoaded", function () {
+  // Defer initialization to improve INP
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(initSlider);
+  } else {
+    setTimeout(initSlider, 500);
+  }
+
+  function initSlider() {
+    // Scope selectors to this specific component instance to avoid conflicts
+    const container = document.getElementById("experience");
+    if (!container) return; // Should not happen given the markup, but safe-guard
+
     // Basic elements
-    const cards = document.querySelectorAll(".card");
-    const prevBtn = document.querySelector(".prev-arrow");
-    const nextBtn = document.querySelector(".next-arrow");
+    const cards = container.querySelectorAll(".card");
+    const prevBtn = container.querySelector(".prev-arrow");
+    const nextBtn = container.querySelector(".next-arrow");
 
     // Exit if no cards found
     if (!cards.length) return;
@@ -109,9 +114,16 @@ const activeIndex = cards.findIndex((card) => card.initialClass === "active");
     const totalCards = cards.length;
 
     // Initialize the slider
-    function initSlider() {
+    function initSliderInternal() {
       // Find the initial active card
-      const activeCard = document.querySelector(".card.active");
+      let activeCard = container.querySelector(".card.active");
+
+      // Fallback if no active class is set in HTML (though it is in this component)
+      if (!activeCard && cards.length > 0) {
+        cards[0].classList.add("active");
+        activeCard = cards[0];
+      }
+
       if (activeCard) {
         currentIndex = Array.from(cards).indexOf(activeCard);
       }
@@ -188,10 +200,10 @@ const activeIndex = cards.findIndex((card) => card.initialClass === "active");
     }
 
     // Initialize everything
-    initSlider();
+    initSliderInternal();
 
     // Handle hover pause
-    const cardWrapper = document.querySelector(".card-wrapper");
+    const cardWrapper = container.querySelector(".card-wrapper");
     if (cardWrapper) {
       cardWrapper.addEventListener("mouseenter", stopAutoplay);
       cardWrapper.addEventListener("mouseleave", startAutoplay);
@@ -199,7 +211,7 @@ const activeIndex = cards.findIndex((card) => card.initialClass === "active");
 
     // Log initialization for debugging
     console.log("Experience slider initialized with", totalCards, "cards");
-  });
+  }
 </script>
 
 <style>
@@ -450,7 +462,9 @@ const activeIndex = cards.findIndex((card) => card.initialClass === "active");
     right: 5%;
   }
 
-  .slider-arrow i {
+  .slider-arrow .icon {
+    width: 24px;
+    height: 24px;
     line-height: 1;
   }
 
@@ -562,4 +576,3 @@ const activeIndex = cards.findIndex((card) => card.initialClass === "active");
     }
   }
 </style>
-

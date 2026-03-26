@@ -1,25 +1,27 @@
 ---
+import { Music, Shirt, Headphones, Star } from "lucide-astro";
+
 const entertainmentOptions = [
   {
-    icon: "fa-solid fa-music",
+    icon: Music,
     title: "Live Music Performances",
     description:
       "Experience electrifying performances by top artists and bands in an intimate setting.",
   },
   {
-    icon: "fa-solid fa-shirt",
+    icon: Shirt,
     title: "Fashion Shows",
     description:
       "Witness glamorous runway events featuring top designers and models in our luxurious venue.",
   },
   {
-    icon: "fa-solid fa-headphones",
+    icon: Headphones,
     title: "DJ Nights",
     description:
       "Dance the night away with our resident and guest DJs spinning the latest hits.",
   },
   {
-    icon: "fa-solid fa-star",
+    icon: Star,
     title: "Celebrity Appearances",
     description:
       "Meet and greet with your favorite stars during our exclusive celebrity nights.",
@@ -32,7 +34,7 @@ const entertainmentOptions = [
     <h2 class="section-title">ENTERTAINMENT & EVENTS</h2>
 
     <p class="section-description">
-      From star-studded nights to fashion shows, Phoenixx, Goa is power packed
+      From star-studded nights to fashion shows, Phoenixx Goa is power packed
       with entertainment and fun, you will never leave a night disappointed!
     </p>
 
@@ -42,7 +44,7 @@ const entertainmentOptions = [
           entertainmentOptions.map((option) => (
             <div class="entertainment-item">
               <div class="icon-circle">
-                <i class={option.icon} />
+                <option.icon class="icon" />
               </div>
               <div class="text-content">
                 <h3 class="item-title">{option.title}</h3>
@@ -62,7 +64,8 @@ const entertainmentOptions = [
             title="Entertainment Video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+            allowfullscreen
+            loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -160,8 +163,9 @@ const entertainmentOptions = [
     flex-shrink: 0;
   }
 
-  .icon-circle i {
-    font-size: 1.5rem;
+  .icon-circle .icon {
+    width: 24px;
+    height: 24px;
     color: #000000;
     transition: all 0.3s ease;
   }

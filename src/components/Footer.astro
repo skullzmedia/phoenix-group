@@ -1,12 +1,13 @@
 ---
 import { Image } from "astro:assets";
+import { MapPin, Phone } from "lucide-astro";
 
 const quickLinks = [
   { name: "Home", url: "/" },
-  { name: "About Us", url: "/about" },
+  { name: "About Us", url: "#about-us" },
   { name: "Entertainment", url: "#entertainment" },
   { name: "Gallery", url: "#gallery" },
-  { name: "Contact Us", url: "/contact" },
+  { name: "Contact Us", url: "#contact-cta" },
 ];
 ---
 
@@ -49,11 +50,11 @@ const quickLinks = [
         <h3 class="footer-heading">Contact Us</h3>
         <ul class="contact-info">
           <li>
-            <i class="fas fa-map-marker-alt"></i>
+            <MapPin class="icon" />
             <span>Hilton Goa Resort, Saipem, Candolim</span>
           </li>
           <li>
-            <i class="fas fa-phone-alt"></i>
+            <Phone class="icon" />
             <a href="tel:09960007937">09960007937</a>
           </li>
         </ul>
@@ -184,10 +185,12 @@ const quickLinks = [
     color: #b0b0b0;
   }
 
-  .contact-info li i {
+  .contact-info li .icon {
     color: #e7c980;
     margin-right: 10px;
     min-width: 16px;
+    width: 16px;
+    height: 16px;
     margin-top: 3px;
   }
 

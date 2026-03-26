@@ -32,9 +32,9 @@ import celebrities7 from "../assets/gallery/celebrities/celebrities7.jpg";
 
 const categories = [
   { id: "all", label: "All" },
-  { id: "performances", label: "Performances" },
+  { id: "entertainment", label: "Entertainment" },
   { id: "ambiance", label: "Ambiance" },
-  { id: "food", label: "Food" },
+  { id: "food", label: "Food & Drinks" },
   { id: "celebrities", label: "Celebrities" },
 ];
 
@@ -45,49 +45,49 @@ const galleryItems = [
     alt: "Live Band",
     width: 800,
     height: 1000,
-    category: "performances",
+    category: "entertainment",
   },
   {
     image: entertainment2,
     alt: "DJ Performance",
     width: 800,
     height: 1000,
-    category: "performances",
+    category: "entertainment",
   },
   {
     image: entertainment3,
     alt: "Stage Show",
     width: 800,
     height: 1000,
-    category: "performances",
+    category: "entertainment",
   },
   {
     image: entertainment4,
     alt: "Dance Floor",
     width: 800,
     height: 1000,
-    category: "performances",
+    category: "entertainment",
   },
   {
     image: entertainment5,
     alt: "Nightlife",
     width: 800,
     height: 1000,
-    category: "performances",
+    category: "entertainment",
   },
   {
     image: entertainment6,
     alt: "Nightlife",
     width: 800,
     height: 1000,
-    category: "performances",
+    category: "entertainment",
   },
   {
     image: entertainment7,
     alt: "Nightlife",
     width: 800,
     height: 1000,
-    category: "performances",
+    category: "entertainment",
   },
 
   // Ambiance
@@ -300,7 +300,7 @@ const galleryItems = [
                   alt={item.alt}
                   width={item.width}
                   height={item.height}
-                  quality={80}
+                  quality={65}
                   loading="lazy"
                   class="gallery-image"
                 />
@@ -340,7 +340,7 @@ const galleryItems = [
 
 <style>
   .gallery-section {
-    padding: 2rem 0;
+    padding: 0.5rem 0 2rem;
     background-color: var(--color-bg);
     position: relative;
     overflow: hidden;
@@ -719,13 +719,13 @@ const galleryItems = [
   const filterButtons = document.querySelectorAll(".filter-btn");
   const galleryItems = document.querySelectorAll(".gallery-item");
   const galleryScroll = document.querySelector(
-    ".gallery-scroll",
+    ".gallery-scroll"
   ) as HTMLElement;
   const prevButton = document.querySelector(
-    ".slider-control.prev",
+    ".slider-control.prev"
   ) as HTMLButtonElement;
   const nextButton = document.querySelector(
-    ".slider-control.next",
+    ".slider-control.next"
   ) as HTMLButtonElement;
 
   let isDragging = false;
@@ -778,7 +778,7 @@ const galleryItems = [
 
   // Add mobile dropdown filter functionality
   const categorySelect = document.querySelector(
-    ".category-select",
+    ".category-select"
   ) as HTMLSelectElement;
   if (categorySelect) {
     categorySelect.addEventListener("change", (e) => {
@@ -924,13 +924,13 @@ const galleryItems = [
   // After your existing code, add the lightbox functionality
   const lightbox = document.getElementById("imageLightbox") as HTMLElement;
   const lightboxImage = lightbox?.querySelector(
-    ".lightbox-image",
+    ".lightbox-image"
   ) as HTMLImageElement;
   const lightboxCaption = lightbox?.querySelector(
-    ".lightbox-caption",
+    ".lightbox-caption"
   ) as HTMLElement;
   const lightboxClose = lightbox?.querySelector(
-    ".lightbox-close",
+    ".lightbox-close"
   ) as HTMLElement;
 
   // Make all gallery items clickable
